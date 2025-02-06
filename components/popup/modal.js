@@ -27,6 +27,8 @@ export function modal(wrapper, screenId, todoList, todosConfig) {
   const title = document.getElementById("title")
   borderButton(title, "/close.svg", () => {
     const screen = document.getElementById(screenId)
+    todosConfig.editing = false
+    todosConfig.editTodo = null   
     screen.className = "hidden"
   })
   const lineWrapper = document.getElementById("lineWrapper")
